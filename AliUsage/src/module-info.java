@@ -1,0 +1,3 @@
+module AliUsage {
+	requires Factory;
+}
