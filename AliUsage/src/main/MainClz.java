@@ -4,6 +4,7 @@ import ir.alikhah.Factory.Shape;
 import ir.alikhah.Factory.ShapeFactory;
 import ir.alikhah.abstractfactory.factory.AbstractFactory;
 import ir.alikhah.abstractfactory.factory.FactoryProducer;
+import ir.alikhah.singletone.SingleObject;
 
 public class MainClz {
 
@@ -28,6 +29,11 @@ public class MainClz {
 	      shape31.draw();
 	      ir.alikhah.abstractfactory.factory.Shape shape41 = absshapeFactory1.getShape("SQUARE");
 	      shape41.draw();
+	      
+	      //singletone
+	      
+	      SingleObject object = SingleObject.getInstance();
+	      object.showMessage();
 	}
 
 }
