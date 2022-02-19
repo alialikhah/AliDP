@@ -5,4 +5,5 @@ module AliUsage {
 	requires Builder;
 	requires Prototype;
 	requires Adapter;
+	requires Bridge;
 }

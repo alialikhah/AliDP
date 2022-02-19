@@ -5,6 +5,9 @@ import ir.alikhah.Factory.ShapeFactory;
 import ir.alikhah.abstractfactory.factory.AbstractFactory;
 import ir.alikhah.abstractfactory.factory.FactoryProducer;
 import ir.alikhah.adaptor.adaptor.AudioPlayer;
+import ir.alikhah.bridge.bridge.Circle;
+import ir.alikhah.bridge.bridge.GreenCircle;
+import ir.alikhah.bridge.bridge.RedCircle;
 import ir.alikhah.builder.builder.Meal;
 import ir.alikhah.builder.builder.MealBuilder;
 import ir.alikhah.prototype.prototype.ShapeCache;
@@ -74,6 +77,14 @@ public class MainClz {
 	      audioPlayer.play("mp4", "alone.mp4");
 	      audioPlayer.play("vlc", "far far away.vlc");
 	      audioPlayer.play("avi", "mind me.avi");
+	      
+	      //bridge
+	      
+	      ir.alikhah.bridge.bridge.Shape redCircle = new Circle(100,100, 10, new RedCircle());
+	      ir.alikhah.bridge.bridge.Shape greenCircle = new Circle(100,100, 10, new GreenCircle());
+
+	      redCircle.draw();
+	      greenCircle.draw();
 	}
 
 }
