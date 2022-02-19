@@ -4,4 +4,5 @@ module AliUsage {
 	requires SingleTone;
 	requires Builder;
 	requires Prototype;
+	requires Adapter;
 }

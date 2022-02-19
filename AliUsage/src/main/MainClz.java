@@ -4,6 +4,7 @@ import ir.alikhah.Factory.Shape;
 import ir.alikhah.Factory.ShapeFactory;
 import ir.alikhah.abstractfactory.factory.AbstractFactory;
 import ir.alikhah.abstractfactory.factory.FactoryProducer;
+import ir.alikhah.adaptor.adaptor.AudioPlayer;
 import ir.alikhah.builder.builder.Meal;
 import ir.alikhah.builder.builder.MealBuilder;
 import ir.alikhah.prototype.prototype.ShapeCache;
@@ -65,6 +66,14 @@ public class MainClz {
 
 	      ir.alikhah.prototype.prototype.Shape clonedShape3 = (ir.alikhah.prototype.prototype.Shape) ShapeCache.getShape("3");
 	      System.out.println("Shape : " + clonedShape3.getType());	
+	      
+	      //adaptor
+	      
+	      AudioPlayer audioPlayer = new AudioPlayer();
+	      audioPlayer.play("mp3", "beyond the horizon.mp3");
+	      audioPlayer.play("mp4", "alone.mp4");
+	      audioPlayer.play("vlc", "far far away.vlc");
+	      audioPlayer.play("avi", "mind me.avi");
 	}
 
 }
