@@ -4,6 +4,8 @@ import ir.alikhah.Factory.Shape;
 import ir.alikhah.Factory.ShapeFactory;
 import ir.alikhah.abstractfactory.factory.AbstractFactory;
 import ir.alikhah.abstractfactory.factory.FactoryProducer;
+import ir.alikhah.builder.builder.Meal;
+import ir.alikhah.builder.builder.MealBuilder;
 import ir.alikhah.singletone.SingleObject;
 
 public class MainClz {
@@ -34,6 +36,20 @@ public class MainClz {
 	      
 	      SingleObject object = SingleObject.getInstance();
 	      object.showMessage();
+	      
+	      // builder
+	      
+	      MealBuilder mealBuilder = new MealBuilder();
+
+	      Meal vegMeal = mealBuilder.prepareVegMeal();
+	      System.out.println("Veg Meal");
+	      vegMeal.showItems();
+	      System.out.println("Total Cost: " + vegMeal.getCost());
+
+	      Meal nonVegMeal = mealBuilder.prepareNonVegMeal();
+	      System.out.println("\n\nNon-Veg Meal");
+	      nonVegMeal.showItems();
+	      System.out.println("Total Cost: " + nonVegMeal.getCost());
 	}
 
 }
