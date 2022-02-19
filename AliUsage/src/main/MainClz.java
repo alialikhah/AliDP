@@ -6,6 +6,7 @@ import ir.alikhah.abstractfactory.factory.AbstractFactory;
 import ir.alikhah.abstractfactory.factory.FactoryProducer;
 import ir.alikhah.builder.builder.Meal;
 import ir.alikhah.builder.builder.MealBuilder;
+import ir.alikhah.prototype.prototype.ShapeCache;
 import ir.alikhah.singletone.SingleObject;
 
 public class MainClz {
@@ -50,6 +51,20 @@ public class MainClz {
 	      System.out.println("\n\nNon-Veg Meal");
 	      nonVegMeal.showItems();
 	      System.out.println("Total Cost: " + nonVegMeal.getCost());
+	      
+	      
+	      //prototype
+	      
+	      ShapeCache.loadCache();
+
+	      ir.alikhah.prototype.prototype.Shape clonedShape = (ir.alikhah.prototype.prototype.Shape) ShapeCache.getShape("1");
+	      System.out.println("Shape : " + clonedShape.getType());		
+
+	      ir.alikhah.prototype.prototype.Shape clonedShape2 = (ir.alikhah.prototype.prototype.Shape) ShapeCache.getShape("2");
+	      System.out.println("Shape : " + clonedShape2.getType());		
+
+	      ir.alikhah.prototype.prototype.Shape clonedShape3 = (ir.alikhah.prototype.prototype.Shape) ShapeCache.getShape("3");
+	      System.out.println("Shape : " + clonedShape3.getType());	
 	}
 
 }

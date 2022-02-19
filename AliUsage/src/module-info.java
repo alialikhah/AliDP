@@ -3,4 +3,5 @@ module AliUsage {
 	requires AbstractFactory;
 	requires SingleTone;
 	requires Builder;
+	requires Prototype;
 }
